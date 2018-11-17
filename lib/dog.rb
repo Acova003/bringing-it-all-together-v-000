@@ -68,5 +68,6 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = '#{name}' AND breed = '#{breed}'")
     if dog.id
       dog_id = dog[0]
+      dog = Dog.new(dog_id[0], )
   end 
 end 
